@@ -5,9 +5,13 @@ const webpackConfig = require('../../build/webpack.test.config')
 module.exports = function(config) {
   config.set({
 
-    // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
 
+    // start these browsers
+    // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
+    // browsers: ['Chrome', 'PhantomJS'],
+    // browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
+    
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
@@ -24,8 +28,8 @@ module.exports = function(config) {
       'karma-mocha',
       'karma-chai',
       'karma-sinon-chai',
-      'karma-chrome-launcher',
-      // 'karma-phantomjs-launcher',
+      // 'karma-chrome-launcher',
+      'karma-phantomjs-launcher',
       'karma-spec-reporter',
       'karma-coverage'
     ],
@@ -52,7 +56,17 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['spec', 'coverage', 'progress'],
+
+
+    coverageReporter: {
+      dir: './coverage',
+      reporters: [
+        { type: 'html', subdir: 'report-html' },
+        { type: 'lcov', subdir: '.' },
+        { type: 'text-summary' }
+      ]
+    },
 
 
     // web server port
@@ -69,18 +83,8 @@ module.exports = function(config) {
 
 
     // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: false,
+    autoWatch: true,
 
-
-    // start these browsers
-    // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    // browsers: ['Chrome', 'PhantomJS'],
-    browsers: ['Chrome'],
-
-
-    // Continuous Integration mode
-    // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false,
 
     // Concurrency level
     // how many browser should be started simultaneous
