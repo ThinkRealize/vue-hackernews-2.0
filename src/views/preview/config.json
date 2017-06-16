@@ -1,0 +1,157 @@
+{
+  "spring": {
+    "stype": "spring",
+    "component": {
+      "actionBar": "growth-preview-action-bar",
+      "topBar": "growth-preview-top-bar",
+      "book": "growth-preview-book"
+    },
+    "moduleBackground": {
+      "growth-preview-front-cover": "http://weixt-static.oss-cn-qingdao.aliyuncs.com/growth/spring/cover-bg.png",
+      "growth-preview-title-page": "http://weixt-static.oss-cn-qingdao.aliyuncs.com/growth/spring/headmaster-bg.png",
+      "growth-preview-catalog": "http://weixt-static.oss-cn-qingdao.aliyuncs.com/growth/spring/catalog-bg.png",
+      "growth-preview-student": "http://weixt-static.oss-cn-qingdao.aliyuncs.com/growth/spring/baby-data-bg.png",
+      "growth-preview-family": "http://weixt-static.oss-cn-qingdao.aliyuncs.com/growth/spring/family-bg.png",
+      "growth-preview-school": "http://weixt-static.oss-cn-qingdao.aliyuncs.com/growth/spring/my-kindergarten-bg.png",
+      "growth-preview-teacher": "http://weixt-static.oss-cn-qingdao.aliyuncs.com/growth/spring/my-teacher-gb.png",
+      "growth-preview-record-school": "http://weixt-static.oss-cn-qingdao.aliyuncs.com/growth/spring/growth-notes-school-bg.png",
+      "growth-preview-record-home": "http://weixt-static.oss-cn-qingdao.aliyuncs.com/growth/spring/growth-notes-home-bg.png",
+      "growth-preview-record-month-attention": "http://weixt-static.oss-cn-qingdao.aliyuncs.com/growth/spring/month-attention-bg.png",
+      "growth-preview-birthday": "http://weixt-static.oss-cn-qingdao.aliyuncs.com/growth/spring/brithday-bg.png",
+      "growth-preview-final-index": "http://weixt-static.oss-cn-qingdao.aliyuncs.com/growth/spring/final-index-bg.png",
+      "growth-preview-final-comment": "http://weixt-static.oss-cn-qingdao.aliyuncs.com/growth/spring/final-message-bg.png",
+      "growth-preview-memory-self": "http://weixt-static.oss-cn-qingdao.aliyuncs.com/growth/spring/memory-bg.png",
+      "growth-preview-memory-thing": "http://weixt-static.oss-cn-qingdao.aliyuncs.com/growth/spring/memory-bg.png",
+      "growth-preview-health": "http://weixt-static.oss-cn-qingdao.aliyuncs.com/growth/spring/health-bg.png",
+      "growth-preview-daily": "http://weixt-static.oss-cn-qingdao.aliyuncs.com/growth/spring/daily-bg.png",
+      "growth-preview-class": "http://weixt-static.oss-cn-qingdao.aliyuncs.com/growth/spring/health-bg.png",
+      "growth-preview-holiday": "http://weixt-static.oss-cn-qingdao.aliyuncs.com/growth/spring/holiday-bg.png",
+      "growth-preview-back-cover": "http://weixt-static.oss-cn-qingdao.aliyuncs.com/growth/spring/back-cover-bg.png"
+    }
+  },
+  "module": {
+    "FRONT_COVER": {
+      "componentTagList": [
+        "growth-preview-front-cover"
+      ]
+    },
+    "GROWTH_TITLE_PAGE": {
+      "componentTagList": [
+        "growth-preview-title-page"
+      ]
+    },
+    "CATALOG": {
+      "growthDataPropList": [
+        "catalog"
+      ],
+      "growthDataClass": "Array",
+      "componentTagList": [
+        "growth-preview-catalog"
+      ]
+    },
+    "GROWTH_STU": {
+      "componentTagList": [
+        "growth-preview-student"
+      ]
+    },
+    "GROWTH_FAMILY": {
+      "componentTagList": [
+        "growth-preview-family"
+      ]
+    },
+    "GROWTH_SCHOOL": {
+      "componentTagList": [
+        "growth-preview-school"
+      ]
+    },
+    "GROWTH_TEACHER": {
+      "growthDataPropList": [
+        "teacherList"
+      ],
+      "growthDataClass": "Array",
+      "componentTagList": [
+        "growth-preview-teacher"
+      ]
+    },
+    "GROWTH_RECORD": {
+      "dataNumber": 1,
+      "growthDataPropList": [
+        "recordList"
+      ],
+      "growthDataParamList": [
+        "indexLevelList"
+      ],
+      "componentTagList": [
+        "growth-preview-record-month-attention",
+        "growth-preview-record-school",
+        "growth-preview-record-home"
+      ]
+    },
+    "GROWTH_BIRTHDAY": {
+      "growthDataPropList": [
+        "birthdayList"
+      ],
+      "growthDataClass": "Array",
+      "componentTagList": [
+        "growth-preview-birthday"
+      ]
+    },
+    "GROWTH_FINAL_INDEX": {
+      "dataNumber": 12,
+      "growthDataPropList": [
+        "finalIndexList",
+        "indexList"
+      ],
+      "growthDataClass": "Array",
+      "growthDataParamList": [
+        "indexLevelList"
+      ],
+      "componentTagList": [
+        "growth-preview-final-index"
+      ]
+    },
+    "GROWTH_FINAL_COMMENT": {
+      "componentTagList": [
+        "growth-preview-final-comment"
+      ]
+    },
+    "GROWTH_MEMORY": {
+      "componentTagList": [
+        "growth-preview-memory-self",
+        "growth-preview-memory-thing"
+      ]
+    },
+    "GROWTH_HEALTH": {
+      "singlePage": true,
+      "componentTagList": [
+        "growth-preview-health"
+      ]
+    },
+    "GROWTH_DAILY": {
+      "growthDataPropList": [
+        "dailyList"
+      ],
+      "growthDataClass": "Array",
+      "dataNumber": 6,
+      "componentTagList": [
+        "growth-preview-daily"
+      ]
+    },
+    "GROWTH_CLASS": {
+      "singlePage": true,
+      "componentTagList": [
+        "growth-preview-class"
+      ]
+    },
+    "GROWTH_HOLIDAY": {
+      "componentTagList": [
+        "growth-preview-holiday"
+      ]
+    },
+    "BACK_COVER": {
+      "componentTagList":[
+        "growth-preview-back-cover"
+      ]
+    }
+  }
+}

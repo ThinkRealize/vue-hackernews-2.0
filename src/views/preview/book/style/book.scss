@@ -1,0 +1,271 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.growth-record__body {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: no-repeat;
+  background-size: 100% 100%;
+  overflow-y: auto;
+
+}
+
+.growth-record {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background:white;
+}
+
+.book {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  align-self: flex-end;
+}
+@media(max-height:769px) {
+  .book {
+    margin-top: 170px;
+  }
+}
+
+.book-main {
+  width: 100%;
+  height: 625px;
+  margin: 0 auto;
+  position: relative;
+  background: url('http://weixt-static.oss-cn-qingdao.aliyuncs.com/growth/spring/book-thickness.png');
+   margin-bottom: 20px;
+}
+
+.book-parent {
+  display: flex;
+  position: relative;
+  width: 980px;
+  height: 615px;
+  margin: 0 auto;
+}
+
+.book-parent__shadow {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 100%;
+    top: 0;
+    left: 440px;
+    background: url('http://weixt-static.oss-cn-qingdao.aliyuncs.com/growth/spring/book-shadow.png') no-repeat center top;
+    z-index: 1000;
+  }
+}
+
+div[data="cover-page"] {
+  background: url('http://weixt-static.oss-cn-qingdao.aliyuncs.com/growth/spring/cover-thickness.png') no-repeat right center;
+}
+
+div[data="back-cover-page"] {
+  background: url('http://weixt-static.oss-cn-qingdao.aliyuncs.com/growth/spring/back-cover-thickness.png') no-repeat left center;
+}
+
+div[data="health-left"],
+div[data="health-right"] {
+  position: absolute;
+  border: 1px solid #8eccba;
+  background: #a3d168;
+  padding: 7px;
+  border-radius: 15px;
+}
+
+
+// .book__content-left::after,
+// .book__content-right::after {
+//   position: absolute;
+//   content: "";
+//   height: 0;
+//   width: 0;
+//   bottom: 0;
+//   transition-duration: 0.5s;
+//   transition-property: width, height;
+//   z-index: 99922;
+// }
+//
+// .book__content-left::after {
+//   left: 0;
+//   background: linear-gradient(45deg, white 45%, #aaaaaa 50%, #cccccc 56%, white 80%);
+//   box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.4);
+// }
+//
+// .book__content-right::after {
+//   right: 0;
+//   background: linear-gradient(-45deg, white 45%, #aaaaaa 50%, #cccccc 56%, white 80%);
+//   box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.4);
+// }
+//
+// .book__content-left:hover::after,
+// .book__content-right:hover::after {
+//   width: 50px;
+//   height: 50px;
+// }
+
+.aside-bar {
+  width: 160px;
+  height: 566px;
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999;
+}
+
+.aside-bar__item {
+  margin-bottom: 10px;
+}
+
+.aside-bar p {
+  cursor: pointer;
+}
+
+.aside-bar div {
+  width: 100%;
+  background: rgba(50, 60, 62, 0.5);
+  border-radius: 5px;
+  color: #fff;
+}
+
+.aside-term,
+.aside-class {
+  height: 36px;
+}
+
+.aside-students {
+  height: 278px;
+}
+
+.aside-full,
+.aside-download {
+  height: 90px;
+}
+
+.aside-bar select {
+  outline: none;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+  padding-top: 5px;
+  padding-left: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-position: 145px center;
+}
+
+.aside-bar select option {
+  background: rgba(50, 60, 62, 0.7);
+}
+
+.aside-students {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.aside-students input[type=search] {
+  outline: none;
+  width: 140px;
+  margin: 20px 0 10px 10px;
+  height: 35px;
+  background: #313b3e;
+  border: 1px solid #93a3ac;
+  border-right: none;
+  text-indent: 1em;
+  color: #fff;
+  font-size: 14px;
+}
+
+// .aside-students input[type=submit] {
+//   outline: none;
+//   cursor: pointer;
+//   width: 37px;
+//   margin: 20px 10px 10px 0;
+//   height: 35px;
+//   background-color: #313b3e;
+//   border: 1px solid #93a3ac;
+//   border-left: none;
+//   background-repeat: no-repeat;
+//   background-position: center center;
+//   background-image: url('http://weixt-static.oss-cn-qingdao.aliyuncs.com/growth/spring/search-bg.png');
+// }
+
+.students-list {
+  width: 110px !important;
+  height: 200px;
+  overflow-y: auto;
+  margin: 0 auto;
+  background: transparent !important;
+}
+
+.students-list p {
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.students-list p.active {
+  color: #04d25d;
+}
+
+.aside-full,
+.aside-download {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*flex-direction: column;*/
+}
+
+.aside-full p,
+.aside-download p {
+  width: 68px;
+  height: 53px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 90px;
+}

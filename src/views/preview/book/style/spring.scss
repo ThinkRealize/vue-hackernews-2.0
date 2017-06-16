@@ -1,0 +1,192 @@
+@import './book.scss';
+
+.book__content-left,
+.book__content-right {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    transition: all .5s ease-in-out;
+}
+
+.page-number__left,
+.page-number__right {
+    position: absolute;
+    font-size: 12px;
+    color: #363837;
+    bottom: 20px;
+}
+
+.page-number__left {
+    left: 20px;
+}
+
+.page-number__right {
+    right: 20px;
+}
+
+.modules__wrapper-left {
+    width: 100%;
+    height: 100%;
+    background-position: 0 0 !important;
+    background-size: 200% 100% !important;
+}
+
+.modules__wrapper-right {
+    width: 100%;
+    height: 100%;
+    background-position: 100% 0 !important;
+    background-size: 200% 100% !important;
+}
+
+// button
+.growth-record__button {
+  display: inline-block;
+  width: 80px;
+  height: 24px;
+  background: #fff;
+  border-radius: 4px;
+  line-height: 24px;
+  text-align: center;
+  color: #000;
+  cursor: pointer;
+  font-size: 14px;
+  border: none;
+  margin: 8px 10px;
+  &:hover {
+    color: #fff !important;
+    background: #a4db5d !important;
+  }
+}
+
+// health 和 class 模块
+.health__wrapper-left,
+.health__wrapper-right {
+}
+
+div[data="health-left"],
+div[data="health-right"] {
+  position: absolute;
+  border: 1px solid #8eccba;
+  background: #a3d168;
+  padding: 7px;
+  border-radius: 15px;
+}
+
+.health-top[data="health-left"] {
+  left: 30px;
+  top: 120px;
+  width: 384px;
+  height: 160px;
+}
+
+.health-top[data="health-right"] {
+  right: 36px;
+  top: 154px;
+  width: 435px;
+  height: 224px;
+}
+
+.health-bottom[data="health-left"] {
+  left: 30px;
+  top: 336px;
+  width: 430px;
+  height: 222px;
+}
+
+.health-bottom[data="health-right"] {
+  right: 10px;
+  top: 425px;
+  width: 454px;
+  height: 134px;
+}
+
+.health-describe {
+  position: relative;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.health-describe h3 {
+  width: 160px;
+  height: 32px;
+  position: absolute;
+  background-color: #ffe9ac;
+  border-radius: 50px;
+  line-height: 32px;
+  text-align: center;
+  color: #333;
+  font-size: 16px;
+  top: -20px;
+  left: 114px;
+}
+
+.health-bottom[data="health-left"] h3 {
+  width: 260px;
+}
+
+.health-result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.health-describe p {
+  width: 50%;
+  font-size: 14px;
+  text-indent: 1em;
+}
+
+.health-describe p span {
+  color: #7eba3c;
+  font-size: 16px;
+  margin-left: 14px;
+}
+
+.health-standard {
+  padding-top: 18px;
+  padding-left: 2px;
+}
+
+.class-photo {
+  padding: 10px;
+  width: 415px;
+  height: 204px;
+}
+
+.health-top[data="health-right"] h3 {
+  width: 340px;
+  border-radius: 50px 50px 0 0;
+  line-height: 34px;
+  top: -42px;
+  left: 50px;
+  height: 34px;
+  text-indent: 7em;
+}
+
+.health-top[data="health-right"] h3::before {
+  content: "";
+  background-image: url(http://weixt-static.oss-cn-qingdao.aliyuncs.com/growth/spring/class-photo-bg.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  height: 66px;
+  width: 211px;
+  position: absolute;
+  top: -32px;
+  left: -20px;
+}
+
+.class-members {
+  font-size: 14px;
+  line-height: 22px;
+  padding: 20px 10px;
+}
+
+.class-members span {
+  padding: 0 10px;
+  border-bottom: 1px dotted #ffe9ac;
+}

@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 import actions from './actions'
 import mutations from './mutations'
 import getters from './getters'
+import priview from '../views/preview/priview'
 
 Vue.use(Vuex)
 
@@ -23,6 +24,9 @@ export function createStore () {
     },
     actions,
     mutations,
-    getters
+    getters,
+    modules: {
+      priview
+    }
   })
 }
