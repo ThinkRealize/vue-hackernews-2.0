@@ -6,19 +6,19 @@
       :style="{backgroundImage: `url(${growthRecord.scenePic})`}">
       <button @click="$store.dispatch('setGrowthPreviewBookIndex',bookIndex + 1)">下一页</button>
       <growth-preview-book>
-        <router-view></router-view>
+        <!--<router-view></router-view>-->
         <!--<component
           :is="'growth-preview-front-cover'"
           :background="currentContent.isMergeModule ? '' : currentContent.background"
           :growthData="currentContent.isMergeModule ? {} : currentContent.growthData"
           :param="currentContent.param">
         </component>-->
-        <!--<component
+        <component
           :is="currentContent.isMergeModule ? '' : currentContent.componentTag"
           :background="currentContent.isMergeModule ? '' : currentContent.background"
           :growthData="currentContent.isMergeModule ? {} : currentContent.growthData"
           :param="currentContent.param">
-        </component>-->          
+        </component>
         <!--<component
           :is="currentContent.isMergeModule ? 'growth-preview-health' : ''"
           :background="currentContent.background"
@@ -45,7 +45,7 @@ export default {
     return Promise.all([
       store.dispatch('setGrwothPreviewBook', bookData.data),
       store.dispatch('setGrowthPreviewGrowthRecord', growthData.data),
-      store.dispatch('setGrowthPreviewBookIndex', index)
+      store.dispatch('setGrowthPreviewBookIndex', parseInt(index))
     ])
   },
   // 按照字母顺序排列各类属性
@@ -113,9 +113,8 @@ export default {
       bookModuleList = this.generateCatalog(this.mergeModule(bookModuleList))
       // 根据模块生成书每一面内容
       this.generateBookContentList(bookModuleList)
-      const bookContent = this.bookContentList[this.bookIndex]
-      console.log('bookContent', bookContent, this.bookIndex)
-      Object.keys(bookContent).forEach((prop) => this.$set(this.currentContent, prop, bookContent[prop]))
+      this.currentContent = this.bookContentList[this.bookIndex]
+      // Object.keys(bookContent).forEach((prop) => this.$set(this.currentContent, prop, bookContent[prop]))
       this.$store.dispatch('setGrowthPreviewBookPages', this.bookContentList.length)
       console.log('this.currentContent.growthData', this.currentContent.growthData)
     },

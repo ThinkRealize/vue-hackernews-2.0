@@ -30,9 +30,9 @@ const actions = {
     return Promise.resolve(book).then(value => commit('SET_GROWTH_PREVIEW_BOOK', value))
   },
   setGrowthPreviewBookIndex ({commit, state}, bookIndex) {
-    if (bookIndex < 0 || bookIndex >= state.bookPages) {
-      return
-    }
+    // if (bookIndex < 0 || bookIndex >= state.bookPages) {
+    //   return
+    // }
     commit('SET_GROWTH_PREVIEW_BOOK_INDEX', bookIndex)
   },
   setGrowthPreviewBookPages ({commit}, bookPages) {

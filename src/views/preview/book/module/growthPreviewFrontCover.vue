@@ -56,6 +56,7 @@ export default {
   // 组件属性
   props: {
   },
+  watch: {
   // 监视属性变化
     growthData: {
       type: Object,
@@ -70,8 +71,7 @@ export default {
     },
     background: {
       default: ''
-    }
-  watch: {
+    }    
   }
 }
 </script>
