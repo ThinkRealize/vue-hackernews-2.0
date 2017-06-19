@@ -30,6 +30,9 @@ export default {
   // 按照字母顺序排列各类属性
   created () {
   },
+  activated () {
+    console.log('this.growthData', this.growthData)
+  },
   // 组件
   components: {
   },
@@ -53,9 +56,18 @@ export default {
   props: {
     growthData: {
       type: Object,
-      default: () => {}
+      default: () => {
+        return {
+          picpath: '',
+          campusName: '',
+          className: '',
+          stuName: ''
+        }         
+      }
     },
-    background: String
+    background: {
+      default: ''
+    }
   },
   // 监视属性变化
   watch: {

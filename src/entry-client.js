@@ -37,6 +37,9 @@ router.onReady(() => {
   // Doing it after initial route is resolved so that we don't double-fetch
   // the data that we already have. Using router.beforeResolve() so that all
   // async components are resolved.
+  // 添加路由器钩子来处理asyncData。添加路由器钩子来处理asyncData。
+  // 在初始路由解析之后执行此操作，以便我们不会双重获取已有的数据。 
+  // 使用router.beforeResolve（）来解决所有异步组件。
   router.beforeResolve((to, from, next) => {
     const matched = router.getMatchedComponents(to)
     const prevMatched = router.getMatchedComponents(from)

@@ -3,7 +3,9 @@ const state = {
   bookIndex: 0,
   bookPages: 0,
   bookPagination: 0,
-  catalogIndex: 0
+  catalogIndex: 0,
+  book: [],
+  growthRecord: {}
 }
 
 const getters = {
@@ -18,6 +20,12 @@ const getters = {
 }
 
 const actions = {
+  setGrowthPreviewGrowthRecord ({commit}, growthRecord) {
+    return Promise.resolve(growthRecord).then(value => commit('SET_GROWTH_PREVIEW_GROWTH_RECORD', value))
+  },
+  setGrwothPreviewBook ({commit}, book) {
+    return Promise.resolve(book).then(value => commit('SET_GROWTH_PREVIEW_BOOK', value))
+  },
   setGrowthPreviewBookIndex ({commit, state}, bookIndex) {
     if (bookIndex < 0 || bookIndex >= state.bookPages) {
       return
@@ -33,6 +41,12 @@ const actions = {
 }
 
 const mutations = {
+  SET_GROWTH_PREVIEW_GROWTH_RECORD (state, growthRecord) {
+    state.growthRecord = growthRecord
+  },
+  SET_GROWTH_PREVIEW_BOOK (state, book) {
+    state.book = book
+  },
   SET_GROWTH_PREVIEW_BOOK_INDEX (state, bookIndex) {
     state.bookIndex = bookIndex
   },

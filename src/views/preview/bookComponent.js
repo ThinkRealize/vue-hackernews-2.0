@@ -1,25 +1,23 @@
-import growthPreviewBook from './book/component/growthPreviewBook.vue'
-
-import growthPreviewBackCover from './book/module/growthPreviewBackCover.vue'
-import growthPreviewBirthday from './book/module/growthPreviewBirthday.vue'
-import growthPreviewCatalog from './book/module/growthPreviewCatalog.vue'
-import growthPreviewDaily from './book/module/growthPreviewDaily.vue'
-import growthPreviewHoliday from './book/module/growthPreviewHoliday.vue'
-import growthPreviewClass from './book/module/growthPreviewClass.vue'
-import growthPreviewFamily from './book/module/growthPreviewFamily.vue'
-import growthPreviewFinalComment from './book/module/growthPreviewFinalComment.vue'
-import growthPreviewFinalIndex from './book/module/growthPreviewFinalIndex.vue'
-import growthPreviewFrontCover from './book/module/growthPreviewFrontCover.vue'
-import growthPreviewHealth from './book/module/growthPreviewHealth.vue'
-import growthPreviewRecordHome from './book/module/growthPreviewRecordHome.vue'
-import growthPreviewRecordSchool from './book/module/growthPreviewRecordSchool.vue'
-import growthPreviewRecordMonthAttention from './book/module/growthPreviewRecordMonthAttention.vue'
-import growthPreviewSchool from './book/module/growthPreviewSchool.vue'
-import growthPreviewStudent from './book/module/growthPreviewStudent.vue'
-import growthPreviewTeacher from './book/module/growthPreviewTeacher.vue'
-import growthPreviewTitlePage from './book/module/growthPreviewTitlePage.vue'
-import growthPreviewMemorySelf from './book/module/growthPreviewMemorySelf.vue'
-import growthPreviewMemoryThing from './book/module/growthPreviewMemoryThing.vue'
+const growthPreviewBackCover = () => import('./book/module/growthPreviewBackCover.vue')
+const growthPreviewBirthday = () => import('./book/module/growthPreviewBirthday.vue')
+const growthPreviewCatalog = () => import('./book/module/growthPreviewCatalog.vue')
+const growthPreviewDaily = () => import('./book/module/growthPreviewDaily.vue')
+const growthPreviewHoliday = () => import('./book/module/growthPreviewHoliday.vue')
+const growthPreviewClass = () => import('./book/module/growthPreviewClass.vue')
+const growthPreviewFamily = () => import('./book/module/growthPreviewFamily.vue')
+const growthPreviewFinalComment = () => import('./book/module/growthPreviewFinalComment.vue')
+const growthPreviewFinalIndex = () => import('./book/module/growthPreviewFinalIndex.vue')
+const growthPreviewFrontCover = () => import('./book/module/growthPreviewFrontCover.vue')
+const growthPreviewHealth = () => import('./book/module/growthPreviewHealth.vue')
+const growthPreviewRecordHome = () => import('./book/module/growthPreviewRecordHome.vue')
+const growthPreviewRecordSchool = () => import('./book/module/growthPreviewRecordSchool.vue')
+const growthPreviewRecordMonthAttention = () => import('./book/module/growthPreviewRecordMonthAttention.vue')
+const growthPreviewSchool = () => import('./book/module/growthPreviewSchool.vue')
+const growthPreviewStudent = () => import('./book/module/growthPreviewStudent.vue')
+const growthPreviewTeacher = () => import('./book/module/growthPreviewTeacher.vue')
+const growthPreviewTitlePage = () => import('./book/module/growthPreviewTitlePage.vue')
+const growthPreviewMemorySelf = () => import('./book/module/growthPreviewMemorySelf.vue')
+const growthPreviewMemoryThing = () => import('./book/module/growthPreviewMemoryThing.vue')
 
 const componentList = [
   growthPreviewBackCover,
@@ -39,7 +37,6 @@ const componentList = [
   growthPreviewTeacher,
   growthPreviewTitlePage,
   growthPreviewCatalog,
-  growthPreviewBook,
   growthPreviewMemorySelf,
   growthPreviewMemoryThing,
   growthPreviewDaily

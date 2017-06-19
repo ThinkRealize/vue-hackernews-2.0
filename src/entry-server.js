@@ -7,6 +7,10 @@ const isDev = process.env.NODE_ENV !== 'production'
 // state of our application before actually rendering it.
 // Since data fetching is async, this function is expected to
 // return a Promise that resolves to the app instance.
+// 这个导出的函数将被`bundleRenderer`调用。
+// 这是我们在实际渲染之前执行数据预取来确定应用程序的状态。
+// 由于数据获取是异步的，所以这个功能是预期的
+// 返回解决应用程序实例的承诺。
 export default context => {
   return new Promise((resolve, reject) => {
     const s = isDev && Date.now()
