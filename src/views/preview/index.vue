@@ -5,33 +5,31 @@
       data-scene="scene01"
       :style="{backgroundImage: `url(${growthRecord.scenePic})`}">
       <button @click="$store.dispatch('setGrowthPreviewBookIndex',bookIndex + 1)">下一页</button>
-      <keep-alive>
-        <growth-preview-book>
-          <!--<router-view></router-view>-->
-          <component
-            :is="'growth-preview-front-cover'"
-            :background="currentContent.isMergeModule ? '' : currentContent.background"
-            :growthData="currentContent.isMergeModule ? {} : currentContent.growthData"
-            :param="currentContent.param">
-          </component>
-          <!--<component
-            :is="currentContent.isMergeModule ? '' : currentContent.componentTag"
-            :background="currentContent.isMergeModule ? '' : currentContent.background"
-            :growthData="currentContent.isMergeModule ? {} : currentContent.growthData"
-            :param="currentContent.param">
-          </component>-->          
-          <!--<component
-            :is="currentContent.isMergeModule ? 'growth-preview-health' : ''"
-            :background="currentContent.background"
-            :growthData="currentContent.isMergeModule ? currentContent.growthData.leftGrowthData : {}">
-          </component>
-          <component
-            :is="currentContent.isMergeModule ? 'growth-preview-class' : ''"
-            :background="currentContent.background"
-            :growthData="currentContent.isMergeModule ? currentContent.growthData.rightGrowthData : {}">
-          </component>-->
-        </growth-preview-book>
-      </keep-alive>
+      <growth-preview-book>
+        <router-view></router-view>
+        <!--<component
+          :is="'growth-preview-front-cover'"
+          :background="currentContent.isMergeModule ? '' : currentContent.background"
+          :growthData="currentContent.isMergeModule ? {} : currentContent.growthData"
+          :param="currentContent.param">
+        </component>-->
+        <!--<component
+          :is="currentContent.isMergeModule ? '' : currentContent.componentTag"
+          :background="currentContent.isMergeModule ? '' : currentContent.background"
+          :growthData="currentContent.isMergeModule ? {} : currentContent.growthData"
+          :param="currentContent.param">
+        </component>-->          
+        <!--<component
+          :is="currentContent.isMergeModule ? 'growth-preview-health' : ''"
+          :background="currentContent.background"
+          :growthData="currentContent.isMergeModule ? currentContent.growthData.leftGrowthData : {}">
+        </component>
+        <component
+          :is="currentContent.isMergeModule ? 'growth-preview-class' : ''"
+          :background="currentContent.background"
+          :growthData="currentContent.isMergeModule ? currentContent.growthData.rightGrowthData : {}">
+        </component>-->
+      </growth-preview-book>
     </div>
   </div>
 </template>
@@ -116,6 +114,7 @@ export default {
       // 根据模块生成书每一面内容
       this.generateBookContentList(bookModuleList)
       const bookContent = this.bookContentList[this.bookIndex]
+      console.log('bookContent', bookContent, this.bookIndex)
       Object.keys(bookContent).forEach((prop) => this.$set(this.currentContent, prop, bookContent[prop]))
       this.$store.dispatch('setGrowthPreviewBookPages', this.bookContentList.length)
       console.log('this.currentContent.growthData', this.currentContent.growthData)

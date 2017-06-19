@@ -31,7 +31,6 @@ export default {
   created () {
   },
   activated () {
-    console.log('this.growthData', this.growthData)
   },
   // 组件
   components: {
@@ -45,7 +44,9 @@ export default {
   // 页面数据
   data: function () {
     return {
-      hover: false
+      hover: false,
+      growthData: this.$store.getters.growthPreviewCurrentContent.growthData,
+      background: this.$store.getters.growthPreviewCurrentContent.background
     }
   },
   mixins: [handleNull],
@@ -54,6 +55,8 @@ export default {
   },
   // 组件属性
   props: {
+  },
+  // 监视属性变化
     growthData: {
       type: Object,
       default: () => {
@@ -68,8 +71,6 @@ export default {
     background: {
       default: ''
     }
-  },
-  // 监视属性变化
   watch: {
   }
 }

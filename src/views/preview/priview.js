@@ -16,6 +16,9 @@ const getters = {
   },
   isGrowthPreviewBookPageEnd: state => {
     return state.bookIndex - state.bookPages + 1 >= 0
+  },
+  growthPreviewCurrentContent: (state) => {
+    return state.book[state.bookIndex] ? state.book[state.bookIndex] : {}
   }
 }
 

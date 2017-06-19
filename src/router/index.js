@@ -17,7 +17,8 @@ export function createRouter () {
     { path: '/', redirect: '/preview' },
     {
       path: '/preview',
-      component: preview
+      component: preview,
+      children: previewChildren
     }
   ])
   return router 
