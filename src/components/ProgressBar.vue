@@ -13,7 +13,7 @@
 export default {
   data () {
     return {
-      percent: 0,
+      percent: 10,
       show: false,
       canSuccess: true,
       duration: 3000,

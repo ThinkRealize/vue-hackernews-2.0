@@ -1,4 +1,4 @@
-var webshot = require('webshot-client')('http://192.168.1.10:8080/')
+var webshot = require('webshot-client')('http://10.10.10.24:8080/')
 const options = {
   renderDelay: 5000,
   screenSize: {
@@ -9,7 +9,7 @@ const options = {
     height: 'all'
   }
 }
-webshot('http://192.168.1.10:8081/preview?index=2', 'output.png', options, (err) => {
+webshot('http://10.10.10.24:8081/preview?index=0', 'output.png', options, (err) => {
   // done
   console.log('success')
   console.log(err)
